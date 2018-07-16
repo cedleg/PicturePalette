@@ -1,0 +1,14 @@
+<mat-grid-list cols="{{colors?.length}}" rowHeight="2:1">
+  <mat-grid-tile
+      *ngIf="!colors?.length"
+      class="color-empty">
+  </mat-grid-tile>
+
+  <mat-grid-tile-header>{{title}}</mat-grid-tile-header>
+  <mat-grid-tile
+      class="mat-elevation-z6"
+      *ngFor="let color of colors"
+      [style.background]="getBackgroundColor(color.html_code)">
+      <span>{{color.html_code}}</span>
+  </mat-grid-tile>
+</mat-grid-list>

@@ -1,0 +1,29 @@
+<mat-grid-list cols="{{cols}}" rowHeight="1:1 ">
+    <mat-grid-tile
+      *ngIf="!images?.length"
+      class="image-empty">
+  </mat-grid-tile>
+
+  <mat-grid-tile
+      *ngFor="let image of images"
+      (click)="navigate(image.id)"
+      [style.background-image]="getBackground(image.src)">
+  </mat-grid-tile>
+</mat-grid-list>
+
+<!-- <form [formGroup]="fooGroup">
+    <h1>FormBuilder</h1>
+    <mat-form-field>
+      <input matInput placeholder="File name" formControlName="filename">
+      <mat-error *ngIf="fooGroup.get('filename').hasError('email') && !fooGroup.get('filename').hasError('required')">
+        Please enter a valid email address
+      </mat-error>
+      <mat-error *ngIf="fooGroup.get('filename').hasError('required')">
+        Email is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+</form> -->
+
+
+<!-- Impossible de gérer des models-->
+<!-- <input [(ngModel)]="foo.filename" placeholder="filename" > -->

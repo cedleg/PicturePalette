@@ -1,0 +1,23 @@
+<mat-toolbar color="primary" class="mat-elevation-z6" role="heading">
+  <mat-toolbar-row>
+
+    <h1 [ngSwitch]="route.component.name">
+      <a *ngSwitchCase="'ColorExtractorComponent'">
+            <span>Picture Palette</span>
+      </a>
+          <div class="button-row">
+              <button mat-button *ngSwitchDefault routerLink="/images">
+                  <mat-icon class="icon">arrow_back</mat-icon>
+                  Picture Palette
+              </button>
+          </div>
+    </h1>
+    
+    <span class="spacer"></span>
+    <a mat-button>
+      <img class="icon" src="assets/images/icons/github-circle-white-transparent.svg" alt="">
+      <span fxHide.xs>Github</span>
+    </a>
+  </mat-toolbar-row>
+</mat-toolbar>
+

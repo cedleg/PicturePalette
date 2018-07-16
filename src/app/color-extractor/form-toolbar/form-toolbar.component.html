@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" class="mat-elevation-z2" role="form">
+    <mat-toolbar-row>
+        <form [formGroup]="formGroup">
+            <mat-form-field class="full-width">
+              <input matInput placeholder="File name" formControlName="filename" value="{{image?.filename}}">
+              <mat-error *ngIf="formGroup.get('filename').hasError('pattern') && !formGroup.get('filename').hasError('required')">
+                Please enter a valid file name
+              </mat-error>
+              <mat-error *ngIf="formGroup.get('filename').hasError('required')">
+                File is <strong>required</strong>
+              </mat-error>
+            </mat-form-field>
+        </form>
+
+        <div class="button-row">
+            <button mat-button (click)="onDeleteClick(image)">
+                <mat-icon class="icon">delete</mat-icon>
+            </button>
+        </div>
+
+    </mat-toolbar-row>
+</mat-toolbar>

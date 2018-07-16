@@ -1,0 +1,4 @@
+<button mat-fab (click)="myUpload.click()">
+  <mat-icon aria-label="Upload">cloud_upload</mat-icon>
+</button>
+<input type="file" accept=".jpg,.jpeg,.png,.gif" #myUpload (change)="onUpload($event)">

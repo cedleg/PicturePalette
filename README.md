@@ -1,6 +1,28 @@
 # PicturePalette
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+User interface for consumes [Imagga](https://docs.imagga.com/) color extractor API<br>
+Picture palette returns a picture graphic charter
+
+## Prerequisites
+
+Get a [Imaga](https://imagga.com/) account and copy Authorization<br>
+Create a assets/config.json file and past this
+```
+{
+    "token":"KEY_AUTHORIZATION_API"
+}
+```
+
+## Development your app
+```
+$git clone 
+$cd PicturePalette
+$npm install
+```
+
+## Build with
+
+* [AndroidStudio](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 
 ## Development server
 
@@ -14,14 +36,23 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+## Contributor
+
+- [Cyril Ichti](https://github.com/seeren)
+
+## Authors
+
+Cédric Leguay - *Initial work* - [picture-palette](https://github.com/cedleg/PicturePalette)
+
+## Motivation
+
+Learning to Angular 6
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

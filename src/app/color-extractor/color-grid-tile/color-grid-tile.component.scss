@@ -1,0 +1,18 @@
+@import "~@angular/material/_theming";
+
+.color-empty{  
+    background: burlywood;
+}
+
+mat-grid-list{
+    background: map_get($mat-grey, 300);
+    margin: 1.5em;
+}
+
+mat-grid-tile-header{
+    font-size: 1.5em;
+}
+
+mat-grid-tile{     
+    border: solid black 2px;
+}
