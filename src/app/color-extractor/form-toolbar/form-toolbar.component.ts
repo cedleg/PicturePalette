@@ -31,7 +31,7 @@ export class FormToolbarComponent implements OnInit {
     this.formGroup = new FormGroup(
       this.formBuilder.group({
           filename: [this.filename,
-            [Validators.pattern('[1-9a-zA-Z]*[.]{1}(jpg|jpeg|png|gif|bmp|svg)'),
+            [Validators.pattern('.*[.]{1}(jpg|jpeg|png|gif|bmp)'),
              Validators.required]
           ],
         }).controls, { updateOn: "blur"}
