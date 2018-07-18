@@ -5,7 +5,7 @@ Picture palette returns a picture graphic charter
 
 ## Prerequisites
 
-Get a [Imaga](https://imagga.com/) account and copy Authorization<br>
+Get a [Imagga](https://imagga.com/) account and copy Authorization<br>
 Create a assets/config.json file and past this
 ```
 {
