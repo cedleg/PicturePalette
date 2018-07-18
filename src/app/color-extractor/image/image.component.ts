@@ -33,16 +33,16 @@ export class ImageComponent implements OnInit {
 
   findById(id: string): void {
     this.imageService.findById(id).subscribe(
-      async (image: Image) =>  await image
-        ? (this.image = image) 
+      async (image: Image) => await image
+        ? (this.image = image)
         : this.storageById(id)
     );
   }
 
-  storageById(id: string){
+  storageById(id: string) {
     this.snackbarService.onExtract();
     this.storageService.get().subscribe(async (images: ImageInterface[]) => {
-      if( !await images || !(this.image = images.find((image: Image) =>  image.id === id) )){
+      if (!await images || !(this.image = images.find((image: Image) => image.id === id))) {
         this.snackbarService.onExtractError();
         this.router.navigate([`/images`]);
       }
@@ -54,7 +54,24 @@ export class ImageComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${src})`);
   }
 
-  exportToCss(){
-    
+  exportToCss() {
+    //trick to download store a file having its URL
+    let data = this.cssWriter(this.image);
+    var file = new Blob([data], {
+      type : 'text/plain'
+    });
+    var fileURL = URL.createObjectURL(file);
+    var a = document.createElement('a');
+    a.href = fileURL;
+    a.target = '_blank';
+    a.download = 'chart.css';
+    document.body.appendChild(a);
+    a.click();
+  }
+
+  cssWriter(image: Image){
+
+    let result = 'data';
+    return result;
   }
 }

@@ -8,9 +8,10 @@
 </mat-grid-list>
 
 <form-toolbar *ngIf="image" [image]="image"></form-toolbar>
+<br>
 <button mat-raised-button color="accent" (click)="exportToCss()">
   <mat-icon aria-label="Export button">favorite</mat-icon>
-  Export to CSS</button>
+  Export colors to CSS</button>
 <color-grid-tile [title]="'Background Colors'" *ngIf="image" [colors]="image.background_colors" ></color-grid-tile>
 <color-grid-tile [title]="'Foreground Colors'" *ngIf="image" [colors]="image.foreground_colors" ></color-grid-tile>
 <color-grid-tile [title]="'Image Colors'" *ngIf="image" [colors]="image.image_colors" ></color-grid-tile>
