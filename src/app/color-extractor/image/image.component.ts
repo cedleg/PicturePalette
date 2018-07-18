@@ -69,9 +69,28 @@ export class ImageComponent implements OnInit {
     a.click();
   }
 
-  cssWriter(image: Image){
+  cssWriter(image): string{
 
-    let result = 'data';
-    return result;
+    let cssData = '';
+
+    image.background_colors.forEach((color, key) => {
+      cssData += `.background_color${key}{\n
+        background: ${color.html_code};\n
+      }\n`
+    });
+
+    image.foreground_colors.forEach((color, key) => {
+      cssData += `.foreground_color${key}{\n
+        background: ${color.html_code};\n
+      }\n`
+    });
+
+    image.image_colors.forEach((color, key) => {
+      cssData += `.image_color${key}{\n
+        background: ${color.html_code};\n
+      }\n`
+    });
+
+    return cssData;
   }
 }
