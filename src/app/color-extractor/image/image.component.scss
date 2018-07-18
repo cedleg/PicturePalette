@@ -12,3 +12,12 @@ mat-grid-tile{
     background-position: center;
     background-repeat: no-repeat;
 }
+
+button{
+    margin: auto;
+    width: 100%;
+}
+
+button:hover{
+background-color: coral;
+}

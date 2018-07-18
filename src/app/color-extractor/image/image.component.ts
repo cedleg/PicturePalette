@@ -54,4 +54,7 @@ export class ImageComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustStyle(`url(${src})`);
   }
 
+  exportToCss(){
+    
+  }
 }
