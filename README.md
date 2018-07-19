@@ -1,7 +1,8 @@
 # PicturePalette
 
 User interface for consumes [Imagga](https://docs.imagga.com/) color extractor API<br>
-Picture palette returns a picture graphic charter
+Picture palette returns a color graphic charter from local picture file<br>
+You can extract color charter in CSS file
 
 ## Prerequisites
 
