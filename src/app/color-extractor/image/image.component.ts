@@ -6,6 +6,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { StorageService } from '../shared/services/storage.service';
 import { ImageInterface } from '../shared/models/image-interface.model';
 import { SnackbarService } from '../shared/services/snackbar.service';
+import { FileGeneratorService } from '../shared/services/file-generator.service';
 
 @Component({
   selector: 'image',
@@ -22,7 +23,8 @@ export class ImageComponent implements OnInit {
     private imageService: ImageService,
     private sanitizer: DomSanitizer,
     private storageService: StorageService,
-    private snackbarService: SnackbarService
+    private snackbarService: SnackbarService,
+    private fileService: FileGeneratorService,
   ) { }
 
   ngOnInit() {
@@ -55,42 +57,7 @@ export class ImageComponent implements OnInit {
   }
 
   exportToCss() {
-    //trick to download store a file having its URL
-    let data = this.cssWriter(this.image);
-    var file = new Blob([data], {
-      type : 'text/plain'
-    });
-    var fileURL = URL.createObjectURL(file);
-    var a = document.createElement('a');
-    a.href = fileURL;
-    a.target = '_blank';
-    a.download = 'chart.css';
-    document.body.appendChild(a);
-    a.click();
+    this.fileService.imageToCss(this.image);
   }
 
-  cssWriter(image): string{
-
-    let cssData = '';
-
-    image.background_colors.forEach((color, key) => {
-      cssData += `.background_color${key}{\n
-        background: ${color.html_code};\n
-      }\n`
-    });
-
-    image.foreground_colors.forEach((color, key) => {
-      cssData += `.foreground_color${key}{\n
-        background: ${color.html_code};\n
-      }\n`
-    });
-
-    image.image_colors.forEach((color, key) => {
-      cssData += `.image_color${key}{\n
-        background: ${color.html_code};\n
-      }\n`
-    });
-
-    return cssData;
-  }
 }
