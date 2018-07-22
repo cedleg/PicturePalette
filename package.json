@@ -1,12 +1,12 @@
 {
   "name": "picture-palette",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "serve": "ng serve",
     "bserve": "ng serve --open",
     "generate": "ng generate",
-    "build": "ng build",
+    "build": "ng build --base-href=/picture-palette/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
