@@ -6,8 +6,8 @@ You can extract color charter in CSS file
 
 ## Prerequisites
 
-Get a [Imagga](https://imagga.com/) account and copy Authorization<br>
-Create a assets/config.json file and past this
+Get a [Imagga](https://imagga.com/) account and copy 'Authorization' key (without 'Basic ' character)<br>
+Add a config.json file in assets directory and past this
 ```
 {
     "token":"KEY_AUTHORIZATION_API"
