@@ -15,7 +15,7 @@ import { FileGeneratorService } from '../shared/services/file-generator.service'
 })
 export class ImageComponent implements OnInit {
 
-  private image: Image;
+  public image: Image;
 
   constructor(
     private router: Router,

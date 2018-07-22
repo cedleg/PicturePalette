@@ -6,7 +6,7 @@
     "serve": "ng serve",
     "bserve": "ng serve --open",
     "generate": "ng generate",
-    "build": "ng build --base-href=/picture-palette/",
+    "build": "ng build --base-href=/picture-palette/ --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

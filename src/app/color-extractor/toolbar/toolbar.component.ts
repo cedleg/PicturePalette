@@ -10,8 +10,9 @@ import { Location } from '@angular/common';
 export class ToolbarComponent implements OnInit {
 
   constructor(
-    private route : ActivatedRoute,
+    public route : ActivatedRoute,
     private location: Location) {
+    //console.log(this.route.routeConfig.component.name); 
     //console.log(this.route);
     //console.log(this.location);
    }

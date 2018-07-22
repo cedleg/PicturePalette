@@ -17,7 +17,7 @@ export class FormToolbarComponent implements OnInit {
   @Input() image: Image;
 
   private filename: string;
-  private formGroup: FormGroup;
+  public formGroup: FormGroup;
 
   constructor(
     private router: Router,

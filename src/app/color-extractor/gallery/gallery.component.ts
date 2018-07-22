@@ -13,7 +13,7 @@ export class GalleryComponent implements OnInit {
 
   @Input() images: Image[];
 
-  private cols: number = 4;
+  public cols: number = 4;
 
   constructor(
     private router: Router,

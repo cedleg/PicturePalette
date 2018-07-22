@@ -12,7 +12,7 @@ import { ImageInterface } from './shared/models/image-interface.model';
 })
 export class ColorExtractorComponent implements OnInit {
 
-  private images: Image[];
+  public images: Image[];
 
   constructor(
     private imageService: ImageService,

@@ -1,7 +1,7 @@
 <mat-toolbar color="primary" class="mat-elevation-z6" role="heading">
   <mat-toolbar-row>
 
-    <h1 [ngSwitch]="route.component.name">
+    <h1 [ngSwitch]="route.routeConfig.component.name">
       <a *ngSwitchCase="'ColorExtractorComponent'">
             <span>Picture Palette</span>
       </a>
