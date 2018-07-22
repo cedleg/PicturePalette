@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Image } from '../shared/models/image.model';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ObservableMedia, MediaChange } from '@angular/flex-layout';
 
 @Component({

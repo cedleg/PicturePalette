@@ -2,12 +2,12 @@
     background-image: url(/assets/images/items/empty-image.png);
 }
 
+mat-grid-list{
+    margin: 1.1em;
+}
+
 mat-grid-tile{
     background-size: cover;
     background-position: center;
     cursor: pointer;
-}
-
-form{
-    margin-left: 1em;
 }
