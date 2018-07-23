@@ -1,12 +1,15 @@
 # PicturePalette
 
-User interface for consumes [Imagga](https://docs.imagga.com/) color extractor API<br>
+User interface consumes [Imagga](https://docs.imagga.com/) color extractor API<br>
 Picture palette returns a color graphic charter from local picture file<br>
-You can extract color charter in CSS file
+You can extract colors charter in CSS file
+
+## Live Demo
+![Live Demo](./resources/pp-poc.gif)
 
 ## Prerequisites
 
-Get a [Imagga](https://imagga.com/) account and copy 'Authorization' key (without 'Basic ' character)<br>
+Get a [Imagga](https://imagga.com/) account and copy 'Authorization' key (without 'Basic ' characters)<br>
 Add a config.json file in assets directory and past this
 ```
 {
@@ -27,7 +30,8 @@ $npm install
 
 ## Development server
 
-Run `npm run serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.<br>
+Run `npm run bserve` for compile in browser.
 
 ## Code scaffolding
 
