@@ -1,3 +1,5 @@
+![npm](https://img.shields.io/npm/l/express.svg)
+
 # PicturePalette
 
 User interface consumes [Imagga](https://docs.imagga.com/) color extractor API<br>
